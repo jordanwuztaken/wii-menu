@@ -1,0 +1,89 @@
+/* styles.css — readable development CSS for Wii Menu clone */
+:root{
+  --bg-top:#e6f3ff;
+  --bg-bottom:#bfe6ff;
+  --card-bg:rgba(255,255,255,0.95);
+  --accent:#66a3ff;
+  --shadow: 0 8px 24px rgba(8,30,48,0.12);
+  --tile-size:120px;
+  --gutter:20px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(180deg,var(--bg-top),var(--bg-bottom));
+  color:#07304a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+#stage{
+  max-width:980px;
+  margin:30px auto;
+  padding:28px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.4));
+  border-radius:14px;
+  box-shadow: var(--shadow);
+}
+#title{
+  margin:0 0 18px 0;
+  font-weight:700;
+  font-size:20px;
+}
+#menu{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--tile-size), 1fr));
+  gap: var(--gutter);
+  align-items:center;
+}
+.tile{
+  width:var(--tile-size);
+  height:var(--tile-size);
+  background: var(--card-bg);
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  padding:8px;
+  box-shadow: 0 6px 12px rgba(12,40,70,0.08);
+  transition: transform 180ms cubic-bezier(.2,.8,.2,1), box-shadow 180ms;
+  user-select:none;
+  cursor:pointer;
+}
+.tile img{
+  width:68px;
+  height:68px;
+  object-fit:contain;
+  border-radius:10px;
+  display:block;
+}
+.tile .label{
+  margin-top:6px;
+  font-size:12px;
+  text-align:center;
+  width:100%;
+  color:#07304a;
+}
+.tile:active, .tile.pressed{
+  transform: translateY(2px) scale(.995);
+}
+.tile:focus{
+  outline: none;
+}
+.tile.selected{
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 18px 32px rgba(6,30,60,0.18);
+  border: 2px solid var(--accent);
+}
+.controls-hint{
+  margin-top:12px;
+  font-size:13px;
+  color:#184b6a;
+}
+/* Responsive tweaks */
+@media (max-width:640px){
+  :root{--tile-size:88px}
+  #stage{margin:12px}
+}

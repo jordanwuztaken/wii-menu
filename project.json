@@ -1,0 +1,16 @@
+{
+  "tiles": [
+    { "label": "Photo Channel", "asset": "app1.svg", "action": { "type": "alert", "message": "Photo Channel" } },
+    { "label": "Mii Channel", "asset": "app2.svg", "action": { "type": "alert", "message": "Mii Channel" } },
+    { "label": "Weather", "asset": "app3.svg", "action": { "type": "alert", "message": "Weather" } },
+    { "label": "News", "asset": "app4.svg", "action": { "type": "alert", "message": "News" } },
+    { "label": "Shop Channel", "asset": "app5.svg", "action": { "type": "alert", "message": "Shop Channel" } },
+    { "label": "Friends", "asset": "app6.svg", "action": { "type": "alert", "message": "Friends" } },
+    { "label": "Settings", "asset": "app7.svg", "action": { "type": "alert", "message": "Settings" } },
+    { "label": "Internet", "asset": "app8.svg", "action": { "type": "alert", "message": "Internet" } },
+    { "label": "Games", "asset": "app9.svg", "action": { "type": "alert", "message": "Games" } },
+    { "label": "Channel 10", "asset": "app10.svg", "action": { "type": "alert", "message": "Channel 10" } },
+    { "label": "Channel 11", "asset": "app11.svg", "action": { "type": "alert", "message": "Channel 11" } },
+    { "label": "Channel 12", "asset": "app12.svg", "action": { "type": "alert", "message": "Channel 12" } }
+  ]
+}
